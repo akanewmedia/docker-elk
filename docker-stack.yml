@@ -48,6 +48,14 @@ services:
     deploy:
       mode: replicated
       replicas: 1
+      
+   alpine:
+     image: alpine:3.7
+     networks:
+       - elk
+     deploy:
+       mode: replicated
+       replicas: 1
 
 configs:
 
