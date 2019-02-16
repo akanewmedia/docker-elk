@@ -50,7 +50,10 @@ services:
       replicas: 1
       
   alpine:
-    image: alpine:3.7
+    image: alpine
+    entrypoint: /bin/sh
+    stdin_open: true
+    tty: true
     networks:
       - elk
     deploy:
